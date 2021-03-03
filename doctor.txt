@@ -1,0 +1,11 @@
+Doctorname;docid;password
+Vijay Kumar;ad65;Dentist
+Tania Chatterjee;ds89;Dentist
+Kangna Dey;de14;General Physician
+Anirban Ghosh;kh25;General Physician
+Batra Patel;sw39;ENT Specialist
+Gandhi Pal;cd12;Gynecologist
+Humani Kar;vf56;Pediatricians
+Vinod Babu;jj45;Pediatricians
+Nayak Ghosh;mm89;Dermatologists
+Babur Hasan;ko45;Dermatologists

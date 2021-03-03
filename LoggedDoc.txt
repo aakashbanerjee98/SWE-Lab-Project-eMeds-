@@ -1,0 +1,2 @@
+doctor_name;doctor_id
+Vijay Kumar;ad65

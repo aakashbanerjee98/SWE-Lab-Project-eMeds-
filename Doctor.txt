@@ -1,0 +1,6 @@
+Doctorname;docid;password
+Vijay Kumar;ad65;2564
+Tania Chatterjee;ds89;6598
+Kangna Dey;de14;7184
+Anirban Ghosh;Kh25;6417
+Batra Patel;sw39;2003

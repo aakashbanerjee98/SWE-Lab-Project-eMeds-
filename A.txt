@@ -1,0 +1,10 @@
+name;Id;report
+Aaksh;9;PDF
+Adam;80;PDF
+Anne;102;SCAN
+Jacob;100;PDF
+Odin;40;JPEG
+Ritam Dey;900;PDF
+Ritam Dey;900;PDF
+Ritam Dey;900;SCAN
+Ritam Dey;900;PDF
