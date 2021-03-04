@@ -161,6 +161,7 @@ public class RegistrationUi extends javax.swing.JFrame {
         String Phone = phone.getText();
         String Gender = gender.getText();
         String Age = age.getText();
+        int t=Integer.parseInt(Age);
         //String Cname= Fname +" "+Lname;
        
          if(Fname.equals(""))
@@ -168,31 +169,31 @@ public class RegistrationUi extends javax.swing.JFrame {
           JOptionPane.showMessageDialog(null,"First name can not be empty");
         }
          
-          if(Lname.equals(""))
+         else if(Lname.equals(""))
         {
           JOptionPane.showMessageDialog(null,"Last name can not be empty");
         }
           
-           if(Email.equals(""))
+         else if(Email.equals("") || !Email.contains("@") || !Email.contains(".com"))
         {
-          JOptionPane.showMessageDialog(null,"Email can not be empty");
+          JOptionPane.showMessageDialog(null,"Email is not Correct");
         }
            
-            if(Phone.equals(""))
+         else if(Phone.equals("") || Phone.length() != 10)
         {
-          JOptionPane.showMessageDialog(null,"Phone number can not be empty");
+          JOptionPane.showMessageDialog(null,"Phone number is not correct");
         }
             
-             if(Gender.equals(""))
+         else if(Gender.equals("") || (!Gender.equals("Male") && !Gender.equals("Female")))
         {
-          JOptionPane.showMessageDialog(null,"Gender can not be empty");
+          JOptionPane.showMessageDialog(null,"Gender is not correct");
         }
              
-              if(Age.equals(""))
+         else if(Age.equals("") || t<0)
         {
-          JOptionPane.showMessageDialog(null,"Age can not be empty");
+          JOptionPane.showMessageDialog(null,"Age is not correct");
         }
-              else
+        else
               {
             int z = ob.RegistedByName(Fname);
             if(z==1){
