@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-//import com.googlecode.javacv.FrameGrabber;
-//mport com.googlecode.javacv.OpenCVFrameGrabber;
-//import com.googlecode.javacv.cpp.opencv_core.IplImage;
-//import static com.googlecode.javacv.cpp.opencv_highgui.*;
+import com.googlecode.javacv.FrameGrabber;
+import com.googlecode.javacv.OpenCVFrameGrabber;
+import com.googlecode.javacv.cpp.opencv_core.IplImage;
+import static com.googlecode.javacv.cpp.opencv_highgui.*;
 import java.awt.Component;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -17,12 +12,9 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author anind
- */
 public class UploadMedicalRecords extends javax.swing.JFrame {
 
     private int flag;
@@ -85,7 +77,7 @@ public class UploadMedicalRecords extends javax.swing.JFrame {
 
         jLabel3.setText("Select the place");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Google Drive", "Internal Storage", "SD card" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please select", "Internal Storage" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -156,7 +148,7 @@ public class UploadMedicalRecords extends javax.swing.JFrame {
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton4)
-                        .addGap(48, 48, 48)
+                        .addGap(32, 32, 32)
                         .addComponent(jButton2)
                         .addGap(13, 13, 13))
                     .addGroup(layout.createSequentialGroup()
@@ -265,7 +257,30 @@ public class UploadMedicalRecords extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
+       int place = jComboBox2.getSelectedIndex();
+       String plc = jComboBox2.getSelectedItem().toString();
+       JFileChooser chooser = new JFileChooser();
+             
+       if(jComboBox2.getSelectedIndex()==0)
+        {
+            this.jLabel4.setText("NO LOCATION SELECTED");
+        } 
+        else if(jComboBox2.getSelectedIndex()==1)
+        {
+           chooser.showOpenDialog(null);
+           File f = chooser.getSelectedFile();
+           if(f!= null){
+               String filename = f.getAbsolutePath();
+               jLabel4.setText(filename);
+               
+           }
+           
+       
+            
+            
+            // ViewMedicalRecords_1 vmr_1 = new ViewMedicalRecords_1();
+          //  vmr_1.setVisible(true);
+        }
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -275,7 +290,7 @@ public class UploadMedicalRecords extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        /*OpenCVFrameGrabber grabber = new OpenCVFrameGrabber(0);
+        OpenCVFrameGrabber grabber = new OpenCVFrameGrabber(0);
         try{
            grabber.start();
            IplImage img = grabber.grab();
@@ -287,7 +302,7 @@ public class UploadMedicalRecords extends javax.swing.JFrame {
        }
        catch (FrameGrabber.Exception e)
        {
-       }*/
+       }
         //IplImage image = cvLoadImage("");
        // final CanvasFrame canvas = new CanvasFrame("");
         // TODO add your handling code here:
