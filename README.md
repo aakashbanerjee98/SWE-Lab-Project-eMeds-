@@ -1,5 +1,5 @@
 # SWE-Lab-Project-eMeds-
-Project Name:e-MEds
+Project Name: eMeds
 <br>
 Authors :Aakash Banerjee,Aayushman Chatterjee, Adrish Ganguly, Aakash Adhikary
 
